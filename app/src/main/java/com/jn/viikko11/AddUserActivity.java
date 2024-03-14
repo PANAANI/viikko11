@@ -8,9 +8,7 @@ import android.widget.RadioGroup;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class AddUserActivity extends AppCompatActivity {
-    EditText first_name_input;
-    EditText last_name_input;
-    EditText email_input;
+    EditText first_name_input, last_name_input, email_input;
     RadioGroup degree_program_input;
     UserStorage us = UserStorage.getInstance();
     @Override
