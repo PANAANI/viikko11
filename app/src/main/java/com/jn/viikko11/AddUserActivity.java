@@ -1,5 +1,6 @@
 package com.jn.viikko11;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -38,5 +39,6 @@ public class AddUserActivity extends AppCompatActivity {
             degree_program = "";
         }
         us.addUser(new User(first_name, last_name, email, degree_program));
+        us.saveUsers();
     }
 }

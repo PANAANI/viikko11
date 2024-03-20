@@ -1,6 +1,8 @@
 package com.jn.viikko11;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
     private String first_name;
     private String last_name;
     private String email;
