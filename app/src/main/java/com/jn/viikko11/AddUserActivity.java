@@ -1,6 +1,5 @@
 package com.jn.viikko11;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -16,6 +15,7 @@ public class AddUserActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_user);
+        UserStorage.getInstance().setContext(this);
         first_name_input = findViewById(R.id.editFirstName);
         last_name_input = findViewById(R.id.editLastName);
         email_input = findViewById(R.id.editEmail);
