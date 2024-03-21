@@ -7,6 +7,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 public class UserStorage {
     private ArrayList<User> users = new ArrayList<>();
@@ -50,6 +51,14 @@ public class UserStorage {
     }
     public void addUser(User user) {
         users.add(user);
+
+        // This code snippet taken from here: https://stackoverflow.com/questions/19471005/sorting-an-arraylist-of-objects-alphabetically
+        Collections.sort(users, new Comparator<User>() {
+            public int compare(User u1, User u2) {
+                return u1.getFirstName().compareTo(u2.getFirstName());
+            }
+        });
+
     }
     public void removeUser(int i) {
         users.remove(i);
